@@ -1,0 +1,131 @@
+:root {
+  --c-primary: #3B82F6;
+  --c-secondary: #10B981;
+  --c-success: #F59E0B;
+  --c-error: #EF4444;
+  --c-bg: #f9fafb;
+  --c-surface: #ffffff;
+  --c-text: #111827;
+  --c-muted: #6B7280;
+  --c-border: #E5E7EB;
+
+  --r-sm: 10px;
+  --r-md: 14px;
+  --r-lg: 18px;
+
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-md: 0 6px 18px rgba(17, 24, 39, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: var(--c-bg);
+  color: var(--c-text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
+    Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.k-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.k-card {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.k-cardHeader {
+  padding: 16px 16px 0;
+}
+
+.k-cardBody {
+  padding: 16px;
+}
+
+.k-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  border: 1px solid var(--c-border);
+  color: var(--c-muted);
+  background: rgba(17, 24, 39, 0.02);
+}
+
+.k-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid var(--c-border);
+  background: var(--c-surface);
+  color: var(--c-text);
+  border-radius: 12px;
+  padding: 10px 12px;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+}
+
+.k-btnPrimary {
+  background: var(--c-primary);
+  border-color: rgba(59, 130, 246, 0.5);
+  color: white;
+}
+
+.k-btnDanger {
+  background: var(--c-error);
+  border-color: rgba(239, 68, 68, 0.5);
+  color: white;
+}
+
+.k-input {
+  width: 100%;
+  border: 1px solid var(--c-border);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: white;
+}
+
+.k-label {
+  display: block;
+  font-size: 12px;
+  color: var(--c-muted);
+  margin-bottom: 6px;
+}
+
+.k-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 860px) {
+  .k-row {
+    grid-template-columns: 1fr;
+  }
+}
